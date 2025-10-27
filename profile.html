@@ -19,8 +19,8 @@
                 <a href="quiz.html">Trắc nghiệm</a>
                 <a href="results.html">Kết quả</a>
                 <a href="chatbot.html">Chatbot AI</a>
-                <a href="profile.html" class="btn-nav-profile">
-                    <i class="fa-solid fa-user"></i> Hồ sơ
+                <a href="login.html" class="btn-nav-profile">
+                    <i class="fa-solid fa-user"></i> Hồ sơ 
                 </a>
             </nav>
         </div>
@@ -30,7 +30,9 @@
         <div class="container" id="profile-container">
             
             <h1><i class="fa-solid fa-user-pen"></i> Hồ sơ của bạn</h1>
-            <p style="text-align: center;">Cập nhật thông tin để nhận gợi ý chính xác hơn.</p>
+            <p style="text-align: center;" id="profile-welcome">
+                Chào mừng, ... Đang tải thông tin...
+            </p>
             
             <form id="profile-form">
                 <div class="form-group">
@@ -53,14 +55,16 @@
                     <input type="text" id="dream-industry" placeholder="Ví dụ: Công nghệ thông tin">
                 </div>
                 
+                <p class="auth-success" id="profile-success"></p>
+                
                 <button type="submit" class="btn btn-primary">
                     <i class="fa-solid fa-save"></i> Lưu hồ sơ
                 </button>
             </form>
             
-            <a href="index.html" class="btn btn-secondary">
-                <i class="fa-solid fa-arrow-left"></i> Về Trang chủ
-            </a>
+            <button id="logout-button" class="btn btn-secondary">
+                <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+            </button>
         </div>
     </main>
 

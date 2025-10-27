@@ -1,59 +1,46 @@
-/* Import font từ Google */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-/* Biến CSS (Color Palette) */
 :root {
-    --primary-color: #6366F1; 
-    --primary-hover: #4F46E5; 
-    --yellow-accent: #FACC15; 
+    --primary-color: #6366F1;
+    --primary-hover: #4F46E5;
+    --yellow-accent: #FACC15;
     --text-color: #212529;
     --light-gray: #f8f9fa;
     --white: #ffffff;
     --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    
+
     --secondary-color: #e9ecef;
     --secondary-hover: #d4dde5;
     --secondary-text: #495057;
 }
 
-/* --- CSS Tổng quan --- */
 body {
-    font-family: 'Poppins', sans-serif; 
-    /* MỚI: Đổi nền 1 chút và bỏ padding
-      Nền trắng sạch sẽ cho trang chủ
-    */
-    background-color: var(--white); 
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
     color: var(--text-color);
     margin: 0;
-    padding: 0; /* Bỏ padding cũ */
+    padding: 0;
     line-height: 1.6;
     min-height: 100vh;
 }
 
-/* --- Animation Tải trang (Dùng cho các container) --- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Container chung 
-  (DÙNG CHO QUIZ, RESULTS, CHATBOT, PROFILE)
-  (Trang chủ KHÔNG DÙNG style này)
-*/
 .container {
-    max-width: 500px; 
+    max-width: 800px;
     margin: 20px auto;
-    padding: 30px; 
+    padding: 30px;
     background-color: var(--white);
-    border-radius: 16px; 
-    box-shadow: var(--shadow); 
-    animation: fadeIn 0.6s ease-out; 
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.6s ease-out;
     margin-bottom: 30px;
-    /* MỚI: Thêm nền gradient cho các trang "app" */
     background-image: linear-gradient(170deg, #f0f2ff 0%, #f8f9fa 100%);
 }
 
-/* CSS H1, H2, H3 chung */
 h1, h2, h3 {
     color: var(--primary-color);
     font-weight: 700;
@@ -62,11 +49,6 @@ h1 { font-size: 1.9em; line-height: 1.3; text-align: left; }
 h2 { text-align: left; }
 h3 { text-align: left; }
 
-/* =====================================================
-   MỚI: CSS CHO TRANG CHỦ (index.html)
-   ===================================================== */
-
-/* --- Thanh điều hướng (Navbar) --- */
 .navbar {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
@@ -75,14 +57,14 @@ h3 { text-align: left; }
     border-bottom: 1px solid #eee;
     padding: 15px 20px;
     box-sizing: border-box;
-    position: sticky; /* Dính lại khi cuộn */
+    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .navbar-container {
-    max-width: 1100px; /* Căn giữa nội dung */
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -129,15 +111,13 @@ h3 { text-align: left; }
     color: var(--text-color) !important;
 }
 
-/* --- Vùng Hero --- */
 .hero {
-    min-height: 60vh; /* Chiếm 60% chiều cao màn hình */
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 40px 20px;
-    /* Nền gradient nhẹ cho vùng hero */
     background: linear-gradient(170deg, #f0f2ff 0%, var(--white) 70%);
 }
 
@@ -147,11 +127,11 @@ h3 { text-align: left; }
 }
 
 .hero h1 {
-    font-size: 3.2em; /* Title siêu to */
+    font-size: 3.2em;
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
-    color: #1a202c; /* Màu chữ tối, mạnh mẽ */
+    color: #1a202c;
     margin-bottom: 15px;
 }
 
@@ -163,12 +143,11 @@ h3 { text-align: left; }
 }
 
 .hero-cta {
-    /* Nút bấm CTA to, rõ ràng */
     padding: 15px 30px;
     font-size: 1.1em;
     border-radius: 12px;
-    width: auto; /* Không full-width */
-    display: inline-block; /* Để căn giữa */
+    width: auto;
+    display: inline-block;
     box-shadow: var(--shadow);
 }
 .hero-cta .fa-arrow-right {
@@ -179,7 +158,6 @@ h3 { text-align: left; }
     transform: translateX(5px);
 }
 
-/* --- Khu vực Tính năng (Trang chủ) --- */
 .features-section {
     padding: 60px 20px;
     max-width: 1100px;
@@ -199,38 +177,33 @@ h3 { text-align: left; }
     margin-bottom: 40px;
 }
 
-/* --- Grid 3D (Đã sửa đổi cho trang chủ) --- */
 .feature-grid {
     display: grid;
-    /* MỚI: 4 CỘT trên desktop */
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    perspective: 1000px; /* "Sân khấu" 3D */
+    perspective: 1000px;
 }
 
-/* 2 CỘT trên tablet */
 @media (max-width: 1000px) {
     .feature-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
-/* 1 CỘT trên mobile */
 @media (max-width: 600px) {
     .feature-grid {
         grid-template-columns: 1fr;
     }
 }
 
-
 .feature-card {
-    background-color: var(--light-gray); 
+    background-color: var(--light-gray);
     border-radius: 12px;
-    padding: 25px; /* Tăng padding */
-    text-decoration: none; 
+    padding: 25px;
+    text-decoration: none;
     color: var(--text-color);
     border: 1px solid #e9ecef;
-    display: block; 
-    transition: all 0.35s ease-out; 
+    display: block;
+    transition: all 0.35s ease-out;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transform-style: preserve-3d;
 }
@@ -248,7 +221,7 @@ h3 { text-align: left; }
 }
 
 .feature-card h3 {
-    font-size: 1.2em; /* To hơn 1 chút */
+    font-size: 1.2em;
     font-weight: 700;
     color: var(--text-color);
     margin: 0 0 5px 0;
@@ -259,28 +232,24 @@ h3 { text-align: left; }
     color: var(--secondary-text);
     line-height: 1.4;
     margin: 0;
-    text-align: left; 
+    text-align: left;
 }
 
-/* Thẻ nổi bật (cho Trắc nghiệm) */
 .feature-card.primary-card {
     background-color: var(--primary-color);
     color: var(--white);
-    /* Nâng thẻ này lên 1 chút */
     transform: translateY(-10px);
 }
 .feature-card.primary-card:hover {
     background-color: var(--primary-hover);
     border-color: var(--primary-hover);
     box-shadow: 0 15px 35px rgba(79, 70, 229, 0.3);
-    /* Hiệu ứng 3D khi hover */
     transform: translateY(-10px) translateZ(25px) rotateX(5deg) rotateY(-5deg);
 }
 .feature-card.primary-card .feature-icon { color: var(--yellow-accent); }
 .feature-card.primary-card h3 { color: var(--white); }
 .feature-card.primary-card p { color: #e0e7ff; }
 
-/* --- Chân trang (Footer) --- */
 .footer {
     text-align: center;
     padding: 30px 20px;
@@ -290,32 +259,25 @@ h3 { text-align: left; }
     margin-top: 50px;
 }
 
-
-/* =====================================================
-   CSS CHO CÁC TRANG "APP" (QUIZ, RESULTS, v.v.)
-   (Giữ nguyên từ trước)
-   ===================================================== */
-
-/* --- Nút bấm (Dùng trong các trang con) --- */
 .btn {
-    display: block; 
-    width: 90%; 
-    padding: 15px 24px; 
-    margin: 10px auto; 
-    background-color: var(--primary-color); 
+    display: block;
+    width: 90%;
+    padding: 15px 24px;
+    margin: 10px auto;
+    background-color: var(--primary-color);
     color: var(--white);
     text-decoration: none;
-    border-radius: 12px; 
-    font-weight: 700; 
-    transition: all 0.3s ease; 
-    border: none; 
+    border-radius: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: none;
     cursor: pointer;
-    font-size: 16px; 
+    font-size: 16px;
     text-align: center;
 }
 .btn:hover {
-    background-color: var(--primary-hover); 
-    transform: translateY(-3px); 
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
     box-shadow: var(--shadow);
 }
 .btn-primary { background-color: var(--primary-color); color: var(--white); }
@@ -323,7 +285,6 @@ h3 { text-align: left; }
 .btn-secondary:hover { background-color: var(--secondary-hover); color: var(--text-color); }
 .btn .fa-solid { margin-left: 10px; }
 
-/* --- Header của trang Quiz --- */
 .quiz-header {
     display: flex;
     justify-content: space-between;
@@ -333,32 +294,31 @@ h3 { text-align: left; }
 }
 #question-counter { font-size: 0.9em; font-weight: 500; color: #666; }
 .progress-bar-container {
-    width: 75%; 
+    width: 75%;
     height: 10px;
     background-color: #e9ecef;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 .progress-bar-fill {
     height: 100%;
     background-image: linear-gradient(45deg, var(--yellow-accent), var(--primary-color));
     border-radius: 10px;
-    transition: width 0.4s ease-out; 
+    transition: width 0.4s ease-out;
 }
 
-/* --- Trang Trắc nghiệm --- */
 .quiz-container { position: relative; min-height: 250px; overflow: hidden; }
 .quiz-question {
     opacity: 0;
-    transform: translateX(30px); 
+    transform: translateX(30px);
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
     position: absolute;
-    width: 100%; 
-    pointer-events: none; 
+    width: 100%;
+    pointer-events: none;
 }
 .quiz-question.fading-out {
     opacity: 0;
-    transform: translateX(-30px); 
+    transform: translateX(-30px);
     position: absolute;
     width: 100%;
     pointer-events: none;
@@ -366,21 +326,21 @@ h3 { text-align: left; }
 .quiz-question.active {
     opacity: 1;
     transform: translateX(0);
-    position: static; 
+    position: static;
     pointer-events: auto;
 }
 
 .answer-btn {
     display: block; width: 100%; padding: 15px; margin-top: 10px;
-    font-size: 16px; font-family: 'Poppins', sans-serif; 
-    background-color: #e9ecef; border: 2px solid #e9ecef; 
+    font-size: 16px; font-family: 'Poppins', sans-serif;
+    background-color: #e9ecef; border: 2px solid #e9ecef;
     border-radius: 12px; cursor: pointer; text-align: left;
     transition: all 0.2s ease; font-weight: 500;
 }
 .answer-btn:hover {
-    background-color: #eef2ff; 
+    background-color: #eef2ff;
     border-color: var(--primary-color);
-    transform: scale(1.02); 
+    transform: scale(1.02);
 }
 .answer-btn.selected {
     background-color: #eef2ff; border-color: var(--primary-hover);
@@ -388,7 +348,6 @@ h3 { text-align: left; }
     box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
 }
 
-/* --- Trang Kết quả --- */
 .results-container { text-align: center; position: relative; }
 .results-container h1,
 .results-container h3,
@@ -405,7 +364,7 @@ h3 { text-align: left; }
 }
 
 .school-grid {
-    display: grid; grid-template-columns: 1fr; 
+    display: grid; grid-template-columns: 1fr;
     gap: 15px; text-align: left; list-style-type: none;
     padding-left: 0; margin-top: 20px;
 }
@@ -439,11 +398,9 @@ h3 { text-align: left; }
 #confetti-canvas {
     position: absolute; top: 0; left: 0;
     width: 100%; height: 100%;
-    z-index: 1000; pointer-events: none; 
+    z-index: 1000; pointer-events: none;
 }
 
-
-/* --- Trang Chatbot --- */
 .chatbot-container h1,
 .chatbot-container p {
     text-align: center;
@@ -468,7 +425,7 @@ h3 { text-align: left; }
     background-color: var(--secondary-color); color: var(--primary-color);
     display: flex; align-items: center; justify-content: center;
     font-size: 20px; font-weight: bold;
-    margin-right: 10px; flex-shrink: 0; 
+    margin-right: 10px; flex-shrink: 0;
 }
 .avatar.bot-avatar {
     background-color: var(--primary-color);
@@ -511,8 +468,8 @@ h3 { text-align: left; }
 #user-input {
     flex-grow: 1; padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 12px 0 0 12px; 
-    font-size: 16px; font-family: 'Poppins', sans-serif; 
+    border-radius: 12px 0 0 12px;
+    font-size: 16px; font-family: 'Poppins', sans-serif;
 }
 #user-input:focus {
     outline: none; border-color: var(--primary-color);
@@ -521,15 +478,15 @@ h3 { text-align: left; }
 #send-btn {
     padding: 12px 20px; background-color: var(--primary-color);
     color: white; border: none;
-    border-radius: 0 12px 12px 0; 
+    border-radius: 0 12px 12px 0;
     cursor: pointer; font-size: 16px;
     transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
 }
 #send-btn:hover { background-color: var(--primary-hover); }
 
 #quick-replies {
-    display: flex; flex-wrap: wrap; 
+    display: flex; flex-wrap: wrap;
     gap: 8px; margin-bottom: 15px;
     transition: opacity 0.3s ease;
 }
@@ -548,17 +505,16 @@ h3 { text-align: left; }
     transform: translateY(-2px);
 }
 
-/* --- Trang Hồ sơ (Profile) --- */
 #profile-container h1,
 #profile-container p {
     text-align: center;
 }
 .form-group {
-    margin-bottom: 20px; text-align: left; 
+    margin-bottom: 20px; text-align: left;
 }
 .form-group label {
     display: block; margin-bottom: 8px;
-    font-weight: 500; color: #333; 
+    font-weight: 500; color: #333;
 }
 
 .form-group input[type="text"],
@@ -566,7 +522,7 @@ h3 { text-align: left; }
     width: 100%; padding: 12px 15px;
     font-size: 16px; font-family: 'Poppins', sans-serif;
     border: 1px solid #ccc; border-radius: 12px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     transition: all 0.3s ease;
 }
 
@@ -577,6 +533,101 @@ h3 { text-align: left; }
 }
 
 #profile-form .btn-primary {
-    margin-top: 10px; 
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.auth-container h1,
+.auth-container p {
+    text-align: center;
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-text);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.auth-tab:hover {
+    color: var(--primary-color);
+}
+
+.auth-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.auth-panel {
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+.auth-panel.active {
+    display: block;
+}
+
+.auth-error {
+    color: #e53e3e;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    min-height: 1.2em;
+}
+.auth-success {
+    color: #38a169;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    min-height: 1.2em;
+}
+#profile-container h1,
+#profile-container p {
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px; text-align: left;
+}
+.form-group label {
+    display: block; margin-bottom: 8px;
+    font-weight: 500; color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%; padding: 12px 15px;
+    font-size: 16px; font-family: 'Poppins', sans-serif;
+    border: 1px solid #ccc; border-radius: 12px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group select:focus {
+    outline: none; border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+#profile-form .btn-primary {
+    margin-top: 10px;
     margin-bottom: 5px;
 }
