@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ sơ - Edupath</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fa-solid fa-compass"></i> Edupath
+            </a>
+            <nav class="navbar-menu">
+                <a href="quiz.html">Trắc nghiệm</a>
+                <a href="results.html">Kết quả</a>
+                <a href="chatbot.html">Chatbot AI</a>
+                <a href="profile.html" class="btn-nav-profile">
+                    <i class="fa-solid fa-user"></i> Hồ sơ
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="profile-container">
+            
+            <h1><i class="fa-solid fa-user-pen"></i> Hồ sơ của bạn</h1>
+            <p style="text-align: center;">Cập nhật thông tin để nhận gợi ý chính xác hơn.</p>
+            
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="full-name">Họ và tên:</label>
+                    <input type="text" id="full-name" placeholder="Ví dụ: Nguyễn Văn A">
+                </div>
+                
+                <div class="form-group">
+                    <label for="school-level">Bạn đang học lớp:</label>
+                    <select id="school-level">
+                        <option value="10">Lớp 10</option>
+                        <option value="11">Lớp 11</option>
+                        <option value="12" selected>Lớp 12</option>
+                        <option value="other">Đã tốt nghiệp</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dream-industry">Ngành học mơ ước (nếu có):</label>
+                    <input type="text" id="dream-industry" placeholder="Ví dụ: Công nghệ thông tin">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa-solid fa-save"></i> Lưu hồ sơ
+                </button>
+            </form>
+            
+            <a href="index.html" class="btn btn-secondary">
+                <i class="fa-solid fa-arrow-left"></i> Về Trang chủ
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Edupath. Nền tảng định hướng tương lai.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

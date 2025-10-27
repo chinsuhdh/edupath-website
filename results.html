@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả - Edupath</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fa-solid fa-compass"></i> Edupath
+            </a>
+            <nav class="navbar-menu">
+                <a href="quiz.html">Trắc nghiệm</a>
+                <a href="results.html">Kết quả</a>
+                <a href="chatbot.html">Chatbot AI</a>
+                <a href="profile.html" class="btn-nav-profile">
+                    <i class="fa-solid fa-user"></i> Hồ sơ
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container results-container">
+            <canvas id="confetti-canvas"></canvas>
+            
+            <h1><i class="fa-solid fa-award"></i> Chúc mừng bạn!</h1>
+            <p>Dựa trên câu trả lời, bạn rất phù hợp với:</p>
+            
+            <div class="industry-card">
+                <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h2>Nhóm ngành: Kỹ thuật & Công nghệ</h2>
+                <p>Bạn có tư duy logic, thích làm việc với máy móc và giải quyết vấn đề.</p>
+            </div>
+
+            <h3><i class="fa-solid fa-school"></i> Các trường gợi ý hàng đầu:</h3>
+            
+            <ul class="school-grid">
+                <li class="school-card">
+                    <div class="school-name">
+                        <span class="icon"><i class="fa-solid fa-microchip"></i></span>
+                        <strong>Đại học Bách Khoa</strong>
+                    </div>
+                    <p>Tuyển sinh khối A00, A01. Điểm chuẩn 2024: 27.5 (Ngành CNTT)</p>
+                </li>
+                <li class="school-card">
+                    <div class="school-name">
+                        <span class="icon"><i class="fa-solid fa-desktop"></i></span>
+                        <strong>Đại học Công nghệ thông tin</strong>
+                    </div>
+                    <p>Tuyển sinh khối A00, A01, D01. Điểm chuẩn 2024: 26.8 (Ngành KTPM)</p>
+                </li>
+                 <li class="school-card">
+                    <div class="school-name">
+                        <span class="icon"><i class="fa-solid fa-satellite-dish"></i></span>
+                        <strong>Học viện Bưu chính Viễn thông</strong>
+                    </div>
+                    <p>Tuyển sinh khối A00, A01. Điểm chuẩn 2024: 26.5 (Ngành ATTT)</p>
+                </li>
+                 <li class="school-card">
+                    <div class="school-name">
+                        <span class="icon"><i class="fa-solid fa-shield-halved"></i></span>
+                        <strong>Học viện Kỹ thuật Mật mã</strong>
+                    </div>
+                    <p>Tuyển sinh khối A00, A01. Điểm chuẩn 2024: 26.0 (Ngành ATTT)</p>
+                </li>
+            </ul>
+            
+            <a href="#" class="btn btn-share"><i class="fa-solid fa-share-nodes"></i> Chia sẻ kết quả</a>
+            <a href="index.html" class="btn btn-secondary"><i class="fa-solid fa-house"></i> Về Trang chủ</a>
+            <a href="chatbot.html" class="btn"><i class="fa-solid fa-comments"></i> Chat với AI để hỏi thêm</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Edupath. Nền tảng định hướng tương lai.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

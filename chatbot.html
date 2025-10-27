@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Edupath</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fa-solid fa-compass"></i> Edupath
+            </a>
+            <nav class="navbar-menu">
+                <a href="quiz.html">Trắc nghiệm</a>
+                <a href="results.html">Kết quả</a>
+                <a href="chatbot.html">Chatbot AI</a>
+                <a href="profile.html" class="btn-nav-profile">
+                    <i class="fa-solid fa-user"></i> Hồ sơ
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container chatbot-container">
+            <h1><i class="fa-solid fa-robot"></i> Chatbot AI Tư vấn</h1>
+            
+            <div id="chat-window">
+                <div class="message-row bot">
+                    <div class="avatar bot-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="chat-message bot">
+                        Xin chào! Bạn muốn tôi tư vấn về ngành học nào?
+                    </div>
+                </div>
+            </div>
+
+            <div id="quick-replies">
+                <button class="quick-reply-btn">Ngành CNTT có khó không?</button>
+                <button class="quick-reply-btn">Em nên chọn trường nào?</button>
+                <button class="quick-reply-btn">Điểm chuẩn ngành KTPM?</button>
+            </div>
+
+            <div id="chat-input-area">
+                <input type="text" id="user-input" placeholder="Nhập câu hỏi của bạn...">
+                <button id="send-btn">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+            
+            <a href="index.html" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Về Trang chủ</a>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2025 Edupath. Nền tảng định hướng tương lai.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
